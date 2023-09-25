@@ -2,3 +2,26 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+	/*Переменные шрифтов--------------------*/
+	--font-family: 'IBM Plex mono';
+	--font-weight-bold: bold;
+	--font-weight-normal: normal;
+	--font-size-main: 18px;
+	--line-height-main: 130%;
+	/*Переменные шрифтов--------------------*/
+
+	/*Переменные цвета(light theme)--------------------*/
+	--color-title: #ffc2e6;
+	--color-accent: #ff8dcb;
+	--color-main: #353430;
+	--bg-color: #FFF1F7;
+	/*Переменные цвета(light theme)--------------------*/
+
+	/*Переменные цвета(dark theme)--------------------*/
+	--color-title-dark: #db00ff;
+	--color-accent-dark: #ff0070;
+	--color-subtitle-dark: #000028;
+	--color-main-dark: #f1b2ce;
+	/*Переменные цвета(dark theme)--------------------*/
+}

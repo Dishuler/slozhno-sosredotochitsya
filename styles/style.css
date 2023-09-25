@@ -1,5 +1,423 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+/*body------------------------*/
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+	font-family: var(--font-family), sans-serif;
+	font-size: var(--font-size-main);
+	line-height: var(--line-height-main);
+	font-weight: var(--font-weight-normal);
+
+	padding: 20px;
+	max-inline-size: 100vw;
+	min-inline-size: 375px;
+	min-block-size: 100vh;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
+/*body------------------------*/
+
+
+
+/*модификаторы----------------*/
+[class*='content-title'] {
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit; /* 130% */
+}
+
+.title-decor {
+	background-color: var(--color-accent);
+}
+
+.heading {
+	color: var(--color-main);
+	font-size: inherit;
+	font-weight: var(--font-weight-bold);
+	line-height: inherit;
+}
+
+.text-shadow {
+	position: relative;
+	font-style: normal;
+	text-decoration: none;
+	text-shadow: 1.8px 1.8px 0px var(--color-title);
+}
+
+.text-shadow::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	inset-block-end: 1px;
+	inset-inline-start: 0;
+	background-color: var(--color-main-dark);
+	display: none;
+}
+
+.text-shadow:hover::after {
+	display: block;
+}
+
+.text-shadow:focus {
+	outline: none;
+	border: none;
+}
+
+.text-shadow:focus-visible {
+	outline: 1px solid var(--color-main-dark);
+}
+
+
+/*модификаторы----------------*/
+
+
+
+/*header----------------------*/
+.header {
+	block-size: calc(100vh - 40px); /*высота экрана - падинги*/
+
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr min-content 1fr;
+}
+
+/*Декоротивные элементы углы--*/
+.decorated-zone {
+	position: relative;
+}
+.decorated-zone::after {
+	content: '';
+	position: absolute;
+	inline-size: 20px;
+	block-size: 20px;
+	inset-inline-end: 0;
+	inset-block-start: 0;
+	border-block-start: 1px solid var(--color-main);
+	border-inline-end: 1px solid var(--color-main);
+}
+
+.decorated-zone::before {
+	content: '';
+	position: absolute;
+	inline-size: 20px;
+	block-size: 20px;
+	inset-inline-start: 0;
+	inset-block-end: 0;
+	border-block-end: 1px solid var(--color-main);
+	border-inline-start: 1px solid var(--color-main);
+}
+
+.header__recover {
+	display: none;
+	color: var(--color-accent);
+	position: absolute;
+	top: 2px;
+	right: 9px;
+	margin-right: 19px;
+}
+
+.header__recover::after {
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	top: 50%;
+	right: -19px;
+	transform: translate(0, -50%);
+	background-color: var(--color-accent);
+	filter: drop-shadow(0px 0px 4px var(--color-accent));
+	border-radius: 50%;
+}
+/*Декоротивные элементы углы--*/
+
+/*header menu-----------------*/
+
+/*позиционирование кнопок-----*/
+.header__theme-menu-list {
+	color: var(--color-main);
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 10px;
+}
+/*позиционирование кнопок-----*/
+
+/*сброс стилей кнопок---------*/
+.header__theme-menu-button {
+	background-color: transparent;
+	padding-inline: 13px;
+	outline: none;
+	border: none;
+	text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+	outline: 1px solid var(--color-main);/*нужна прозрачностььььььььь!!!!!!!!!!!!!!!!!!!!!!!----------*/
+}
+
+.header__theme-menu-button:focus {
+	outline: none;
+	border: none;
+}
+
+.header__theme-menu-button:focus-visible {
+	border-block-end: 1px solid var(--color-main);
+}
+/*сброс стилей кнопок---------*/
+
+.header__theme-menu-button_active {
+	outline: 1px solid currentColor;
+}
+/*header menu-----------------*/
+
+.header__title {
+	color: var(--color-title);
+	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	font-weight: var(--font-weight-bold);
+	line-height: 82.5%;
+
+	text-shadow: 4px 4px 0px var(--color-accent);
+	
+	align-self: center;
+}
+
+.header__text {
+	inline-size: clamp(20.9375rem, 15.2677rem + 24.1911vw, 30.75rem);
+	justify-self: end;
+	align-self: center;
+
+	font-weight: var(--font-weight-bold);
+}
+/*header----------------------*/
+
+
+
+/*сетка---------------------------*/
+
+.main {
+	margin-block: 60px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+}
+
+.why {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.why__list {
+	grid-column: 2 / -1;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.what__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 20px;
+}
+
+.how {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.how__list {
+	grid-column: 2 / -1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.gallery__list {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+}
+
+.gallery__item:nth-child(1) {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+}
+.gallery__item:nth-child(2) {
+	grid-row: 1 / span 2;
+	grid-column: 3 / span 1;
+}
+.gallery__item:nth-child(3) {
+	grid-row: 2 / -1;
+	grid-column: 1 / span 1;
+}
+.gallery__item:nth-child(4) {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+}
+.gallery__item:nth-child(5) {
+	grid-column: 2 / span 2;
+	grid-row: 3 / span 1;
+}
+
+.why__item > :not(:last-child) {
+	margin-block-end: 10px;
+}
+
+.what__item > :not(:last-child) {
+	margin-block-end: 10px;
+}
+
+.how__item > :not(:last-child) {
+	margin-block-end: 10px;
+}
+
+/*сетка---------------------------*/
+
+
+
+
+
+
+
+
+
+/*стили main---------------------------*/
+
+.why__title {
+	margin-block-end: 20px;
+}
+
+.what__title {
+	margin-block-end: 20px;
+}
+
+/*стили main---------------------------*/
+
+
+.gallery__title {
+	margin-block-end: 20px;
+}
+
+.gallery__image {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+/*footer-----------------------*/
+.footer {
+	inline-size: 100%;
+	block-size: calc(100vh - 40px); /*высота экрана - падинги*/
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__title {
+	color: var(--color-title);
+	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	font-weight: var(--font-weight-bold);
+	line-height: 82.5%;
+
+	text-shadow: 4px 4px 0px var(--color-accent);
+}
+/*footer-----------------------*/
+
+
+
+/*медиа-----------------------*/
+@media (width <= 768px) {
+	.header__theme-menu {
+		align-self: center;
+		justify-self: end;
+	}
+	.header__theme-menu-list {
+		flex-direction: column;
+		gap: 13px;
+	}
+	.what__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}
+
+@media (width <= 375px) {
+	.header__text {
+		inline-size: 100%;
+	}
+
+	.header__title {
+		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+	}
+
+	.why {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.why__list {
+		grid-column: 1 / -1;
+	}
+
+	.how {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
+
+	.how__list {
+		grid-column: 1 / span 1;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.gallery__list {
+		display: block;
+	}
+}
+/*медиа-----------------------*/
+
+
+/*пустышки----------
+
+.header__theme-menu {
+}
+.header__theme-menu-item {
+}
+.header__theme-menu-button_type_light {
+}
+.header__theme-menu-button_type_auto {
+}
+.header__theme-menu-button_type_dark {
+}
+
+.why__content-title {
+}
+.why__content-text {
+}
+
+.what {
+}
+
+.what__item {
+}
+.what__content-title {
+}
+.what__content-text {
+}
+
+.gallery {
+}
+----------пустышки*/
