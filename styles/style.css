@@ -76,6 +76,7 @@
 /*header----------------------*/
 .header {
   block-size: 100vh;
+  position: relative;
 
   display: grid;
   justify-content: center;
@@ -85,7 +86,6 @@
 
 /*Декоротивные элементы углы--*/
 .decorated-zone {
-  position: relative;
 }
 .decorated-zone::after {
   margin: 20px;
@@ -113,12 +113,10 @@
 
 .header__recover {
   display: none;
-  margin-block-start: 20px;
   color: var(--color-accent);
   position: absolute;
-  inset-block-start: 2px;
-  inset-inline-end: 9px;
-  margin-inline-end: 19px;
+  inset-inline-end: 50px;
+  inset-block-start: 20px;
 }
 
 .header__recover::after {
@@ -199,7 +197,7 @@
 /*сетка---------------------------*/
 
 .main {
-  margin-block: 60px;
+  margin-block: 70px;
 
   display: flex;
   flex-direction: column;
