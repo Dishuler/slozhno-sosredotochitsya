@@ -86,6 +86,7 @@
 
 /*Декоротивные элементы углы--*/
 .decorated-zone {
+  position: relative;
 }
 .decorated-zone::after {
   margin: 20px;
@@ -112,11 +113,9 @@
 }
 
 .header__recover {
+  position: absolute;
   display: none;
   color: var(--color-accent);
-  position: absolute;
-  inset-inline-end: 50px;
-  inset-block-start: 20px;
 }
 
 .header__recover::after {
@@ -197,7 +196,7 @@
 /*сетка---------------------------*/
 
 .main {
-  margin-block: 70px;
+  margin-block: 60px;
 
   display: flex;
   flex-direction: column;
@@ -206,7 +205,7 @@
 
 .why {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, calc((100% / 3) - 20px));
   gap: 20px;
 }
 
@@ -226,7 +225,7 @@
 
 .how {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, calc((100% / 3) - 20px));
   gap: 20px;
 }
 
