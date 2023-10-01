@@ -347,6 +347,11 @@
     margin: 10px;
   }
 
+  .main {
+    margin-block: 35px;
+    gap: 50px;
+  }
+
   .why {
     grid-template-columns: 1fr;
     gap: 20px;
