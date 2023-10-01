@@ -35,7 +35,7 @@
 }
 
 .heading {
-  color: var(--sub-heading);
+  color: var(--menu-color);
   font-size: inherit;
   font-weight: var(--font-weight-bold);
   line-height: inherit;
@@ -186,7 +186,7 @@
 }
 
 .header__text {
-  inline-size: clamp(20.9375rem, 15.2677rem + 24.1911vw, 30.75rem);
+  inline-size: 50%;
   justify-self: end;
   align-self: center;
   font-weight: var(--font-weight-bold);
@@ -196,7 +196,7 @@
 /*сетка---------------------------*/
 
 .main {
-  margin-block: 45px;
+  margin-block: 42px;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -204,7 +204,7 @@
 
 .why {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 
@@ -223,7 +223,7 @@
 
 .how {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 
@@ -285,10 +285,6 @@
 /*сетка---------------------------*/
 
 /*стили main---------------------------*/
-
-.why__title {
-  margin-block-end: 20px;
-}
 
 .what__title {
   inline-size: calc((100% / 3) - 30px);
