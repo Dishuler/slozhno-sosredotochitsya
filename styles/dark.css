@@ -1,37 +1,33 @@
 .page.theme_dark {
+  /*Переменные цвета(light theme)--------------------*/
   --color-title: var(--color-title-dark);
   --color-accent: var(--color-accent-dark);
-  --color-main: var(--color-accent-dark);
+  --text-color: var(--color-main-dark);
+  --bg-color: var(--color-subtitle-dark);
+  --sub-heading: var(--color-subtitle-dark);
+  --menu-color: var(--color-accent);
+  --text-shadow: var(--color-accent);
 
-  color: var(--color-main-dark);
-  background-color: var(--color-subtitle-dark);
   background-image: url(../images/cover-image-dark.png);
-}
-
-.theme_dark .text-shadow {
-  text-shadow: 1.8px 1.8px 0px var(--color-accent-dark);
+  /*Переменные цвета(light theme)--------------------*/
 }
 
 @media (prefers-color-scheme: dark) {
-  .page {
+  :root {
     --color-title: var(--color-title-dark);
     --color-accent: var(--color-accent-dark);
-    --color-main: var(--color-accent-dark);
+    --text-color: var(--color-main-dark);
+    --bg-color: var(--color-subtitle-dark);
+    --sub-heading: var(--color-subtitle-dark);
+    --menu-color: var(--color-accent);
+    --text-shadow: var(--color-accent);
+  }
 
-    color: var(--color-main-dark);
-
-    background-color: var(--color-subtitle-dark);
+  .page {
+    color: var(--text-color);
+    background-color: var(--bg-color);
     background-image: url(../images/cover-image-dark.png);
   }
-
-  .title-decor {
-    color: var(--color-subtitle-dark);
-  }
-
-  .text-shadow {
-    text-shadow: 1.8px 1.8px 0px var(--color-accent-dark);
-  }
-
   .header__recover {
     display: block;
   }

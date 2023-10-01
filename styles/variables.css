@@ -14,8 +14,11 @@
   /*Переменные цвета(light theme)--------------------*/
   --color-title: #ffc2e6;
   --color-accent: #ff8dcb;
-  --color-main: #353430;
   --bg-color: #fff1f7;
+  --text-color: #353430;
+  --text-shadow: #ffc2e6;
+  --sub-heading: var(--text-color);
+  --menu-color: var(--text-color);
   /*Переменные цвета(light theme)--------------------*/
 
   /*Переменные цвета(dark theme)--------------------*/

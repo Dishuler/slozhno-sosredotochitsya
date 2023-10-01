@@ -1,37 +1,33 @@
 .page.theme_light {
+  /*Переменные цвета(light theme)--------------------*/
   --color-title: #ffc2e6;
   --color-accent: #ff8dcb;
-  --color-main: #353430;
   --bg-color: #fff1f7;
-  --color-main-dark: var(--color-main);
+  --text-color: #353430;
+  --text-shadow: #ffc2e6;
+  --sub-heading: var(--text-color);
+  --menu-color: var(--text-color);
 
-  color: var(--color-main);
-  background-color: var(--bg-color);
   background-image: url(../images/cover-image-light.png);
+  /*Переменные цвета(light theme)--------------------*/
 }
 
 .theme_light .header__recover {
   display: none;
 }
 
-.theme_light .text-shadow {
-  text-shadow: 1.8px 1.8px 0px var(--color-title);
-}
-
 @media (prefers-color-scheme: light) {
-  .page {
-    --color-main-dark: var(--color-main);
-    color: var(--color-main);
+  :root {
+    --color-title: #ffc2e6;
+    --color-accent: #ff8dcb;
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --text-shadow: #ffc2e6;
+  }
 
+  .page {
+    color: var(--text-color);
     background-color: var(--bg-color);
     background-image: url(../images/cover-image-light.png);
-  }
-
-  .title-decor {
-    color: var(--color-subtitle-dark);
-  }
-
-  .header__recover {
-    display: none;
   }
 }
