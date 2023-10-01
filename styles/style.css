@@ -348,7 +348,7 @@
   }
 
   .main {
-    margin-block: 35px;
+    margin-block: 25px;
     gap: 50px;
   }
 
@@ -379,7 +379,8 @@
   }
 
   .gallery__list {
-    display: block;
+	display: flex;
+	flex-direction: column;
   }
 }
 /*медиа-----------------------*/
