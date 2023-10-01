@@ -196,7 +196,7 @@
 /*сетка---------------------------*/
 
 .main {
-  margin-block: 55px;
+  margin-block: 50px;
   display: flex;
   flex-direction: column;
   gap: 80px;
