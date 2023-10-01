@@ -196,7 +196,7 @@
 /*сетка---------------------------*/
 
 .main {
-  margin-block: 60px;
+  margin-block: 55px;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -243,7 +243,9 @@
 
 .gallery__image {
   display: block;
-  object-fit: contain;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -296,13 +298,6 @@
 
 .gallery__title {
   margin-block-end: 20px;
-}
-
-.gallery__image {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 /*footer-----------------------*/
