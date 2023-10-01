@@ -86,7 +86,6 @@
 
 /*Декоротивные элементы углы--*/
 .decorated-zone {
-  margin: 20px;
   position: relative;
 }
 .decorated-zone::after {
