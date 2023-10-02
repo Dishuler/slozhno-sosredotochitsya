@@ -169,7 +169,6 @@
  /*header menu-----------------*/
  
  .header__title {
-	line-height: normal;
 	color: var(--color-title);
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-weight: var(--font-weight-bold);
@@ -198,12 +197,11 @@
  
  .why {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 10px;
+	grid-template-columns: minmax(auto, 315px) 2fr;
+	gap: 20px;
  }
  
  .why__list {
-	grid-column: 2 / -1;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -217,10 +215,9 @@
  
  .how {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: minmax(auto, 315px) 2fr;
 	grid-auto-rows: max-content;
-	gap: 10px;
-	align-items: baseline;
+	gap: 20px;
  }
  
  .how__title-division {
@@ -233,7 +230,6 @@
  }
  
  .how__list {
-	grid-column: 2 / -1;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
