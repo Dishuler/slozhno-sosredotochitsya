@@ -347,7 +347,7 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
   .header {
     padding: 10px;
   }
